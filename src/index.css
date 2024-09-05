@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Default gap for smaller screens */
+
+
+/* Apply gap-x-2 between 1030px and 1115px */
+@media (min-width: 1024px) and (max-width: 1210px) {
+  .grd {
+    grid-column-gap: 0.5rem; /* Equivalent to gap-x-2 in Tailwind CSS (8px) */
+  }
+}
+
+@media (min-width: 0px) and (max-width: 915px) {
+  .grd {
+    grid-column-gap: 0.5rem; /* Equivalent to gap-x-2 in Tailwind CSS (8px) */
+  }
+}
+
+.hover-2 {
+  perspective: 1000px;
+  overflow: hidden;
+  margin: 8px;
+  min-width: 240px;
+  max-width: 320px;
+  width: 100%;
+}
+
+.hover-2 img {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  max-width: 100%;
+  transform-style: preserve-3d;
+}
+
+.hover-2:hover img {
+  /* transform: scale(1.3) rotate(-5deg); */
+  transform: rotateY(15deg) rotateX(10deg) scale(1.3)
+}
+html, body {
+  background-color: black; /* or any color you want */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll issues */
+}
+
+.hover-1 {
+    background-image: linear-gradient(#1A1E22,#1A1E22);
+    
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: .4s;
+  }
+  .hover-1:hover {
+    background-size: 100% 100%;
+  }
+  
+  body {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    gap: 20px;
+    place-content: center;
+  }
+  h3 {
+    font-family: system-ui, sans-serif;
+    font-size: 3rem;
+    margin:0;
+    cursor: pointer;
+    padding: 0 .07em;
+  }
+  @layer base {
+  :root {
+        --background: 0 0% 100%;
+        --foreground: 240 10% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 3.9%;
+        --primary: 240 5.9% 10%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 240 4.8% 95.9%;
+        --secondary-foreground: 240 5.9% 10%;
+        --muted: 240 4.8% 95.9%;
+        --muted-foreground: 240 3.8% 46.1%;
+        --accent: 240 4.8% 95.9%;
+        --accent-foreground: 240 5.9% 10%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 5.9% 90%;
+        --input: 240 5.9% 90%;
+        --ring: 240 10% 3.9%;
+        --chart-1: 12 76% 61%;
+        --chart-2: 173 58% 39%;
+        --chart-3: 197 37% 24%;
+        --chart-4: 43 74% 66%;
+        --chart-5: 27 87% 67%;
+        --radius: 0.5rem;
+    }
+  .dark {
+        --background: 240 10% 3.9%;
+        --foreground: 0 0% 98%;
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 0 0% 98%;
+        --primary-foreground: 240 5.9% 10%;
+        --secondary: 240 3.7% 15.9%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
+        --accent: 240 3.7% 15.9%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 3.7% 15.9%;
+        --input: 240 3.7% 15.9%;
+        --ring: 240 4.9% 83.9%;
+        --chart-1: 220 70% 50%;
+        --chart-2: 160 60% 45%;
+        --chart-3: 30 80% 55%;
+        --chart-4: 280 65% 60%;
+        --chart-5: 340 75% 55%;
+    }
+}
+  @layer base {
+  * {
+    @apply border-border;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+}
